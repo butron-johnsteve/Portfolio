@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/back.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Adjust opacity (0.6 = 60% black) */
+    z-index: -1;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Container Styling */
+.affiliations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Affiliation Items */
+.affiliation-item {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Image Styling */
+.affiliation-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Image */
+.affiliation-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Styling */
+.affiliation-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 0, 31, 0.8);
+    display: flex;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    box-sizing: border-box; /* Ensures proper padding inside */
+}
+
+/* Show overlay on hover */
+.affiliation-item:hover .affiliation-overlay {
+    opacity: 1;
+}
+
+/* Text Styling */
+.affiliation-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    width: 100%; /* Ensures full width */
+}
+
+.affiliation-description {
+    font-size: 1rem;
+    color: #ddd;
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto; /* Ensures center alignment */
+}
+
+/* Centering the text properly */
+.affiliation-title, 
+.affiliation-description {
+    text-align: center;
+    width: 100%; /* Prevent shifting */
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .affiliations-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .affiliation-item {
+        width: 90%;
+    }
+}
+
+/* Ensure the Back Button is at the Bottom */
+.back-container {
+    text-align: center;
+    margin-top: 30px; /* Adds spacing */
+    padding-bottom: 20px; /* Ensures it's at the bottom */
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}

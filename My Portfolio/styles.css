@@ -1,0 +1,101 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: url('images/back.webp') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Adjust opacity (0.6 = 60% black) */
+    z-index: -1;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #74F8D6;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 150px auto 100px;
+    padding: 20px;
+}
+
+/* Profile Section */
+.profile {
+    width: 50%;
+}
+
+.profile h1 {
+    font-size: 3rem;
+    color: #74F8D6;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    font-size: 1rem;
+    color: #D1D5DB;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.profile-buttons {
+    margin-top: 20px;
+}
+
+.profile-buttons button {
+    background: none;
+    border: 2px solid #74F8D6;
+    color: #74F8D6;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-buttons button:hover {
+    background: #74F8D6;
+    color: black;
+}
+
+/* Illustration */
+.illustration {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration img {
+    width: 80%;
+    border-radius: 20px;  /* Rounded corners */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.illustration img:hover {
+    transform: scale(1.05);  /* Slight zoom effect */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Soft glow effect */
+}

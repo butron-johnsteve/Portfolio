@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/back.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Adjust opacity (0.6 = 60% black) */
+    z-index: -1;
+}
+
+/* Header Styling */
+header {
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Project Container */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Project */
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Project Title */
+.project h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Project Description */
+.project-description {
+    font-size: 1rem;
+    max-width: 80%;
+    margin: 10px auto;
+    color: #ddd;
+}
+
+/* Image Grid */
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Image Styling */
+.project-images img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.project-images img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Ensure the Back Button is at the Bottom */
+.back-container {
+    text-align: center;
+    margin-top: 30px; /* Adds spacing */
+    padding-bottom: 20px; /* Ensures it's at the bottom */
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
